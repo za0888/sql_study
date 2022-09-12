@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id('empno');
             $table->string('ename');
             $table->string('job');
+            $table->integer('sal');
             $table->integer('mgr')->nullable();
             $table->date('hiredate');
             $table->integer('comm')->nullable();

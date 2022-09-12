@@ -15,7 +15,7 @@ class Dept extends Model
       'loc'
     ];
 
-    public function epmps()
+    public function emps()
     {
         return $this->hasMany(Emp::class);
     }
