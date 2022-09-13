@@ -44,7 +44,8 @@ class Emp extends Model
     protected function hireDate():Attribute
     {
         return Attribute::make(
-            set:fn($value)=>Carbon::createFromFormat('d.m.Y',$value)->format('Y-m-d')
+            set:fn($value)=>Carbon::createFromFormat('d.m.Y',$value)->format('Y-m-d'),
+            get:fn($value)=>Carbon::createFromFormat('Y-m-d',$value)->format('d.m.y')
         );
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmpController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('what-comm',[EmpController::class,'whatComm'])->name('what-comm');
+Route::get('sort-cond',[EmpController::class,'sortCond']);
+Route::get('payment-status',[EmpController::class,'PaymentStatus']);
