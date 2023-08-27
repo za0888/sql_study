@@ -9,7 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 class Dept extends Model
 {
     use HasFactory;
+
     protected $primaryKey='deptno';
+
     protected $fillable=[
       'dname',
       'loc'

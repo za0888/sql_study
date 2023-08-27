@@ -13,6 +13,7 @@ class Emp extends Model
     use HasFactory;
 
     protected $primaryKey = 'empno';
+
     protected $fillable = [
         'ename',
         'job',
@@ -20,9 +21,12 @@ class Emp extends Model
         'comm',
         'hiredate'
     ];
+
     protected $casts = [
         'hyredate' => 'date:dd.mm.YY',
     ];
+
+//    mutators
     public function dept()
     {
         return $this->belongsTo(Dept::class)->withDefault('');
